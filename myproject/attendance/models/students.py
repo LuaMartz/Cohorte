@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 from .cohorte import Cohorte
 
 class Student(models.Model):
@@ -9,3 +10,9 @@ class Student(models.Model):
     
     def __str__(self):
         return 'Nombre: ' + self.name + ' Tipo de Documento: ' + self.document_type + ' Número de Documento: ' + str(self.document_number) + ' Cohorte: ' + str(self.cohorte)
+    
+    def __str__(self):
+        return self.name
+    
+    def get_absolute_url(self):
+        return reverse("student_detail", args=[str(self.id)])

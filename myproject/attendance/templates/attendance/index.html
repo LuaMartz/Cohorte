@@ -1,0 +1,30 @@
+{% block content %}
+<h1>¡Bienvenidos a la plataforma de Asistencia de Educamas!</h1>
+
+<p>La plataforma de todas nuestras Cohortes, 
+    donde podrás verificar nuestros estudiantes y sus asistencias </p>
+
+<h2>Nuestras Cohortes:</h2>
+<ul>
+    <li>
+        {% if cohortes %}
+            {% for cohorte in cohortes %}
+                <p>{{cohorte.name}}</p>
+            {% endfor %}
+        {% endif %}
+    </li>
+</ul>
+
+<h2>Nuestros Estudiantes:</h2>
+
+<ul>
+    <li>
+        {% if students %}
+            {% for student in students %}
+                <p>{{student.name}}</p>
+            {% endfor %}
+        {% endif %}
+    </li>
+</ul>
+
+{% endblock content %}
