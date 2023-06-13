@@ -8,4 +8,4 @@ class Cohorte(models.Model):
     number = models.IntegerField(default=9)
 
     def __str__(self):
-        return 'Nombre: ' + self.name + ' Número de cohorte: ' + str(self.number) + ' Director de grupo: ' + self.group_director + ' Curso: ' + self.course + ' Número de estudiantes Inicial: ' + str(self.number_students_initial) + ' Número de estudiantes: ' + str(self.number)
+        return self.name

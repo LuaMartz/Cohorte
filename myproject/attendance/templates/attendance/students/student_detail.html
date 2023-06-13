@@ -1,1 +1,10 @@
 <h1>Hola estudiante {{student_detail}} </h1>
+<p>{{student_detail.document_type}}: {{student_detail.document_number}}</p>
+
+<h3>Información Cohorte</h3>
+<ul>
+    <li>Nombre de la Cohorte: {{student_detail.cohorte.name}}</li>
+    <li>Número de Cohorte: {{student_detail.cohorte.number}}</li>
+    <li>Director de la Cohorte: {{student_detail.cohorte.group_director}}</li>
+    <li>Curso: {{student_detail.cohorte.course}}</li>
+</ul>
